@@ -79,7 +79,11 @@ mute.addEventListener("click", function() {
 /**
  * adjust volume when slider moved
  */
-
+slider.addEventListener("change", function() {
+	console.log(slider.value)
+	video.volume = slider.value/100
+	volume.innerText = `${slider.value}%`
+});
 
 /**
  * switch to vintage style when vintage button pressed
